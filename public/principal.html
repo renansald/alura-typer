@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Alura Typer</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<div class="container">
+<body>
+    <h1 class="center">Alura Typer</h1>
+    <p class = "frase center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="center">
+      <img src="img/spinner.gif" alt="Spinner" id="spinner">
+      <p id="erro">Ocorreu um erro, por favor tente novamente</p>
+      <p id="salvo-placar">Placar salvo com sucesso</p>
+    </div>
+      <ul class = "informacoes center">
+      <li>
+         <i class="small material-icons icone">dock</i>
+        <span id = "numero-palavras">30</span> palavras
+      </li>
+      <li>
+         <i class="small material-icons icone">query_builder</i>
+        <span id= "time">10</span> segundos
+      </li>
+    </ul>
+    <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
+    <ul class="center">
+      <li><span id="conta-caracter">0</span> caracteres</li>
+      <li><span id="conta-palavras">0</span> palavras</li>
+    </ul>
+    <div class="botoes">
+      <a class="btn-floating btn-large waves-effect waves-light red" id="butao-reinicia">
+        <i class="material-icons">restore</i>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light green" id="butao-placar">
+        <i class="material-icons">assignment</i>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light blue" id="butao-frase">
+        <i class="material-icons">shuffle</i>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light grey" id="butao-frase-id">
+        <i class="material-icons">repeat_one</i>
+      </a>
+      <input type="number" min="1" max="10" id="frase-id">
+      <div class="select-usuarios">
+   <select id="usuarios">
+      <option value="Douglas">Douglas</option>
+      <option value="Flavio">Flavio</option>
+      <option value="Nico">Nico</option>
+   </select>
+  </div>
+      <a class="btn-floating btn-large waves-effect waves-light yellow" id="sync">
+        <i class="material-icons">swap_vert</i>
+      </a>
+    </div>
+    <!--<section class="jogador">
+      <input type="name" placeholder="Jogador" id="gamer">
+      <a class="btn-floating btn-tiny waves-effect waves-light black" id="butao-add">
+        <i class="material-icons tiny">arrow_drop_down</i>
+      </a>
+    </section>-->
+    <section class="placar">
+      <h3 class="center">Placar</h3>
+      <table class="centered bordered">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>No. de palavras</th>
+            <th>Deleta</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src = js/main.js></script>
+    <script src = js/placar.js></script>
+    <script src = js/trocaFrase.js></script>
+    <script src = js/selectize.js></script>
+</body>
+</html>

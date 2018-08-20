@@ -1,0 +1,119 @@
+obs.: eventos comuns do Js tem uma fauncçao que é o ."evento"(function(){}), como por exemplo .blur, .focus, .change, .dblclick
+
+quando se quer previnir um evento na função do on. ou click. deve passar a palavra event entre os parenteses
+
+_____________________________________________________________________________________________________________
+01: jQuery("") ou $("") é um seletor a exmplo do querySelector, para slecionar partes do html
+    sintaxe: jQuery(".caso seja classe", "#caso seja id") ou $(".caso seja classe", "#caso seja id"). quando se quer pegar todos os filho $("pai filho"), que são filhos direto $("pai>filho")
+
+01.1: .text() serve para acessar o conteúdo selecionado peça jQuery e retornar esse texto para a variável, ou mudar o conteúdo de texto de uma variável
+      sintaxe: $("o que tiver selecionado").text() (Para pegar o conteúdo do jQuery);
+               "variável".text("novo conteudo") (para mudar o conteúdo da variável);
+
+02: .split() serve para quebrar o texto de acordo com o dado passado
+    sintaxe: frase.split(" ") os dados serão quebrados no espaço, exemplo tenho 3 reais, ele vai retornar um array com três elementos que são as palavras da frase
+
+03: .on() faz a mesma coisa que o addEventListern
+     sintaxe: "variável".on("evento a ser escutado", function a ser executada)
+
+04: .val() pega o valor dos campos de digitação
+    sintaxe:  "variável".val()
+
+05: setInterval(function(){}, tempo em milesegundos) a cada passar do tempo definifod ele exeecuta aquela função
+
+06: .attr()  utiilizad para ler valores de atributos ou modifica-los;
+    sintaxe: "local onde vai pegar".attr("atributo"), pega o valor do atributos
+             "local onde vai pegar".attr("atributo", "valor"), modifica um valor de um atributos
+             "local onde vai pegar".attr("atributo", true or false) adiciona ou tira um atributo sem valor
+
+07: clearInterval(), recebe a variável para qual o setInterval esta retornando e pra o setInterval
+
+08: one() .on() faz a mesma coisa que o addEventListern, porém escuta o evento uma única vez
+
+09: $(document).ready(function(){}) chama todas as funçoes do Js quando carregadas
+    sintaxe: $(document).ready(function(){funções a serem executadas}); ou
+             $(function(){funções a serem executadas})
+
+10: .css() permite mudar diretamente no css e eum style;
+    sintaxe: "variável que vc deseja mudar o css".css("o que vc quer mudar(background-color)", "como mudar(ligthgray)")
+
+11: .addClass() adiciona uma classe a uma tag do html
+    sintaxe: "variável de onde que setar a classe".addClass("nome da classe")
+
+12: .removeClass() remove uma classe
+    sintaxe: idêntica ao item anterior
+
+13: .togglerClass() se a classe já existir ele remove, se não existir ele adiciona
+    sintaxe: idêntica ao item anterior
+
+14: substr() faz a comparação de duas strings
+    sintaxe: "variável da string padrão".substr(de onde começa, caracter 0 por exemplo, até onde vai, caracter 19 ou variável a ser comparada.length)
+
+15: .find() vai descendo a arvore de nós do html até achar o que esta procurando
+    sintaxe: $(".secção").find("table")
+
+16: .append() adiciona o que ta entre parentes ao local selecionados antes do ponto, no final
+    sintaxe: "local onde será adicionado".append("o que adicionar");
+
+17: .prepend() adiciona o que ta entre parentes ao local selecionados antes do ponto, no inicio
+    sintaxe: "local onde será adicionado".append("o que adicionar");
+
+18: event.preventDefault() não deixa que o eventa siga o que foi pre programando pra fazer.
+
+19: .parent() seleciona o pais de quem tá antes da vírgula
+    sintaxe: "variável a qual deseja o pai".parent();
+
+20 $("<tag>") quando passado assim ele tá criando um elemento html
+
+21: .hide() esconde o elemento
+
+22: .show() mostra um elemento
+
+23: .toggle() mostra ou esconde algo.
+    sintaxe: "variável de onde que setar a classe".toggle()
+
+24: .slideDown() faz aparecer ao poucos pra baixo.
+    sintaxe: "elemento que deseja ser mostrado".slideDown("caso queira que seja uma transição lenta, colocar um tempo aqui")
+
+25: .slideUp() faz sumir aos poucos pra cima
+    sintaxe: "elemento que deseja desaparecer".slideUp("caso queira que seja uma transição lenta, colocar um tempo aqui")
+
+26: .slideToggle() faz desaparecer ou aparecer
+    sintaxe: "elemento que deseja aparecer ou desaparecer".slideToggle("caso queira que seja uma transição lenta, colocar um tempo aqui")
+
+27: .fadeOut() esconde o elemento antes do ponto, adicionando um display none, porém não remove da página
+    sintaxe: "elemento que deseja esconder".fadeOut("caso queira que seja uma transição lenta, colocar um tempo aqui")
+
+28: .fadeIn() mostra o elemento antes do ponto, adicionando um display,
+    sintaxe: "elemento que deseja mostrar".fadeOut("caso queira que seja uma transição lenta, colocar um tempo aqui
+
+29: .fadeToggle() mostra ou esconde um elemento
+    sintaxe: idem ao anterior
+
+30: .stop() controla as animações de maneira que ela para no ultimo click ou enter que ela receber
+    sintaxe: .stop().animação
+
+31: .offset() mostra as distâncias que a referencia selecionada esta na pagina, UTILIZAR NO CONSOLE
+
+32: .animate() recebe dois parâmetros, o primeiro é animação que deve ficar em um objeto, o segundo o tempo
+    sintaxe: onde vai ocorrer a animação.animate({animação}, tempo);
+
+33: scrollTop: faz o arquivo dar um scroll ate o local indicado, o valor deve ser passado em px
+    sintaxe: scrollTop: "30px"
+
+34: .is() permite consultar uma pseudo class, por exemplo toda vez que o elemnto ta com o display diferente de none ele ganha a pseudo class :visible, retornando false ou true
+    sintaxe: o elemento de teste.is(":a pseudo classe")
+
+35: .hasClass() retorna verdade se o elemnto tiver uma classe e falso se não tiver
+    sintaxe: elemento de teste.hasClass("classe");
+
+36: $.get() faz uma requisição a um site, servidor
+    sintaxe: $get("endereço da requisição", função), retorna o que foi solicitado em uma variável com o nome data
+
+36.1: .fail() serve pra quando existe um erro na requisição do item 36
+
+36.2: .always() vai executar idependente se a .get der certo ou errado
+
+37: Math.random() gera um número aleatório de 0 a 1
+
+38: Math.floor() arredonda um número para baixo, como se fosse o piso
